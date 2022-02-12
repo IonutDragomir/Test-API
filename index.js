@@ -27,7 +27,13 @@ let URL = `https://newsapi.org/v2/everything?q=${input}&language=en&apiKey=efb0a
 document.querySelector("[data-button]").addEventListener("click", getData);
 
 async function getData() {
-  let result = await fetch(URL);
+  let result = await fetch("https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/search/NewsSearchAPI?q=taylor%20swift&pageNumber=1&pageSize=10&autoCorrect=true&fromPublishedDate=null&toPublishedDate=null", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-host": "contextualwebsearch-websearch-v1.p.rapidapi.com",
+		"x-rapidapi-key": "81735f0910msh04fbe462a0ab2cfp1d56bfjsn747cf7d9b4ab"
+	}
+})
   let data = await result.json();
 
 
