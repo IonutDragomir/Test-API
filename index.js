@@ -23,7 +23,7 @@
 // console.log([theNewsAPI, googleNewsAPI]);
 
 let input = "search";
-let URL = `https://api.thenewsapi.com/v1/news/all?api_token=h1UUJhBTJaOz08GlPRbz7jgolehXQ9nHTv0skfAd&language=en&search=${input}`;
+let URL = `https://newsapi.org/v2/everything?q=${input}&language=en&apiKey=efb0aea185bb4f20b853307af0faf083`;
 document.querySelector("[data-button]").addEventListener("click", getData);
 
 async function getData() {
